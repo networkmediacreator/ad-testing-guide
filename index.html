@@ -1,204 +1,725 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Ad Test on FB</title>
-    <style>
-        /* Global styles */
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #f9fafb;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-            font-weight: 700;
-        }
-        p {
-            margin: 0.5rem 0 1rem 0;
-        }
-        /* Container */
-        .container {
-            max-width: 860px;
-            padding: 0 1rem;
-            margin: 0 auto;
-        }
-        /* Header section */
-        .hero {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            /* Use a gradient background instead of an external image */
-            background: linear-gradient(135deg, #3b82f6 0%, #4338ca 100%);
-            color: white;
-            padding: 4rem 0;
-        }
-        .hero-text {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0 1rem;
-        }
-        .hero-text h1 {
-            font-size: 2rem;
-            margin: 0 0 0.5rem;
-        }
-        .hero-text p {
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.4;
-        }
-        /* Section styles */
-        section {
-            padding: 2rem 0;
-        }
-        section:nth-of-type(even) {
-            background-color: #ffffff;
-        }
-        section:nth-of-type(odd) {
-            background-color: #f4f7fa;
-        }
-        .section-title {
-            font-size: 1.5rem;
-            color: #1e40af;
-            margin-bottom: 0.5rem;
-        }
-        ul {
-            margin: 0 0 1rem 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        .footer {
-            text-align: center;
-            padding: 1rem 0;
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero section -->
-    <div class="hero">
-        <div class="hero-text">
-            <h1>How to Ad Test on FB</h1>
-            <p>Predict the performance of your videos before posting them.</p>
-        </div>
-    </div>
-    <div class="container">
-        <!-- Introduction -->
-        <section id="introduction">
-            <h2 class="section-title">Introduction</h2>
-            <p>This is how you check how long people would watch your video for, and see exactly at which points they might drop off and stop watching.</p>
-            <p>You will need 3 main elements to create an Ad Test on Facebook:</p>
-            <ul>
-                <li>Video</li>
-                <li>Title</li>
-                <li>Thumbnail</li>
-            </ul>
-            <p>Here’s exactly what you need to do. No extra information.</p>
-            <p>If something isn’t mentioned here, you probably don’t need to touch it.</p>
-        </section>
-        <!-- Step 1: Access Ads Manager -->
-        <section id="adsmanager">
-            <h2 class="section-title">1. Access Ads Manager</h2>
-            <p>Go to <a href="https://adsmanager.facebook.com" target="_blank" rel="noopener">adsmanager.facebook.com</a> and select <strong>Campaigns</strong> from the menu on the left.</p>
-            <!-- Image 0: Meta Ads Manager menu showing Campaigns selected -->
-            <img src="Screenshot_2025-08-21_at_23.25.42.webp" alt="Meta Ads Manager menu showing the Campaigns tab selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-            <p>Under the <strong>Campaigns</strong> tab, click the green <strong>[+ Create]</strong> button.</p>
-            <!-- Image 1: Campaigns interface with All ads and Create button -->
-            <img src="Screenshot_2025-08-21_at_23.26.17.webp" alt="Campaigns interface showing All ads tab and a large green Create button" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>How to Ad Test on FB</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-        <!-- Step 2: Choose Campaign Objective -->
-        <section id="objective">
-            <h2 class="section-title">2. Choose the Campaign Objective</h2>
-            <p>Select <strong>Engagement</strong> as the objective of the campaign.</p>
-            <!-- Image 2: Engagement objective selection popup -->
-            <img src="Screenshot_2025-08-21_at_23.27.07.webp" alt="Create new campaign pop‑up showing Engagement objective selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-        <!-- Step 3: Choose Campaign Setup -->
-        <section id="setup">
-            <h2 class="section-title">3. Choose the Campaign Setup</h2>
-            <p>When prompted to choose a campaign setup, pick <strong>Manual engagement campaign</strong> for full control over settings.</p>
-            <!-- Image 3: Manual engagement campaign selection -->
-            <img src="Screenshot_2025-08-21_at_23.27.29.webp" alt="Popup showing the option to choose a Manual engagement campaign" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-        <!-- Step 4: Create the Campaign -->
-        <section id="campaign">
-            <h2 class="section-title">4. Create the Campaign</h2>
-            <p>We will be working with <strong>three containers</strong>: the <em>Campaign</em>, the <em>Ad Set</em>, and the <em>Ad</em>.</p>
-            <p>Let’s set up the <strong>Campaign</strong> first. All you need to do here is give your advertising campaign a unique name that will not repeat with other campaigns you create.</p>
-            <!-- Image 4: Campaign name input field -->
-            <img src="Screenshot_2025-08-21_at_23.29.37.webp" alt="Campaign settings screen showing a field to enter a unique campaign name" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-        <!-- Step 5: Configure the Ad Set -->
-        <section id="adset">
-            <h2 class="section-title">5. Configure the Ad Set</h2>
-            <p>Next, we’ll set up the Ad Set. After giving your Ad Set a unique name, change the <strong>Conversion location</strong> to <em>On your ad</em>.</p>
-            <!-- Image 5: Ad set with conversion location drop‑down open -->
-            <img src="Screenshot_2025-08-22_at_0.48.38.webp" alt="Ad set settings showing conversion location drop‑down with 'On your ad' selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-            <p>Your settings under the <strong>Conversion</strong> section should look like this:</p>
-            <!-- Image 6: Conversion settings including engagement type and performance goal -->
-            <img src="Screenshot_2025-08-22_at_0.48.46.webp" alt="Conversion settings showing Engagement type set to Video views and Performance goal set to Maximise ThruPlay views" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-        <!-- Step 6: Set Budget and Schedule -->
-        <section id="budget">
-            <h2 class="section-title">6. Set Budget & Schedule</h2>
-            <p>Scroll down to the <strong>Budget & schedule</strong> section and select <em>Lifetime budget</em>. A lifetime budget between <strong>$3–$5</strong> will usually be enough to achieve about <strong>1,000 impressions</strong>.</p>
-            <!-- Image 7: Budget drop‑down showing Lifetime budget selected -->
-            <img src="Screenshot_2025-08-22_at_0.50.16.webp" alt="Budget & schedule section with Lifetime budget selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-            <p>Adjust the <strong>Start</strong> and <strong>End</strong> dates so they are 24 hours apart. It helps to start the campaign 30 minutes to 1 hour after the current time to account for processing and uploading videos. If you’re travelling, keep an eye on time zones. After making these changes, double‑check that your budget hasn’t been altered.</p>
-        </section>
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-        <!-- Step 7: Identity Selection -->
-        <section id="identity">
-            <h2 class="section-title">7. Identity Selection</h2>
-            <p>If you’re working with many Facebook pages, select the one you’d like to create the test for under the <strong>Identity</strong> section of the Ad container.</p>
-            <!-- Image 17: Identity dropdown -->
-            <img src="Screenshot_2025-08-22_at_0.55.17.webp" alt="Facebook Page identity selection dropdown" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>        <!-- Step 8: Set up your Creative -->
-        <section id="creative">
-            <h2 class="section-title">8. Set up your Creative</h2>
-            <p>Once your Ad Set has been configured, scroll down to the <strong>Ad</strong> container and click <em>New Ad</em>. This section guides you through uploading your video and preparing the creative. Meta organises these tasks into a series of steps:</p>
-            <ul>
-                <li><strong>Media</strong> – Upload the video you’d like to test.</li>
-                <li><strong>Trim</strong> – Skip trimming; you should always test the full video.</li>
-                <li><strong>Crop</strong> – Skip cropping to preserve your original aspect ratio.</li>
-                <li><strong>Text</strong> – Add a primary text option or leave blank if you only want to analyse video performance.</li>
-                <li><strong>Enhancements</strong> – Keep enhancements turned off so your video isn’t altered by AI features.</li>
-            </ul>
-            <!-- Image 8: Media library with video thumbnails -->
-            <img src="Screenshot_2025-08-22_at_0.57.57.webp" alt="Media library showing video thumbnails during the Media step" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-            <p>During the <strong>Media</strong> step, select the video you want to test from your account’s media library or upload a new file. Only one video can be selected for each ad.</p>
-            <!-- Image 9: Creative step indicator (Media, Trim, Crop, Text, Enhancements) -->
-            <img src="Screenshot_2025-08-22_at_0.59.59.webp" alt="Set up your creative vertical step indicator showing Media, Trim, Crop, Text and Enhancements" style="width:100%;max-width:400px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem auto;display:block;">
-            <p>Meta will guide you through each step. You can skip the <strong>Trim</strong> and <strong>Crop</strong> steps since this test should use your full‑length video. In the <strong>Text</strong> step, add a simple headline or leave it blank if you only want to measure how well the video itself holds attention.</p>
-            <!-- Image 10: Text editing area -->
-            <img src="Screenshot_2025-08-22_at_1.00.43.webp" alt="Text step showing a primary text box for adding a caption" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-            <p>When you reach the <strong>Enhancements</strong> panel, turn off all options (Translate text, Visual touch‑ups, Text improvements and Add video effects) to ensure your creative is not altered. Meta’s AI enhancements can change the look and feel of your ad, so leave them disabled for an accurate test.</p>
-            <!-- Image 11: Enhancements panel -->
-            <img src="Screenshot_2025-08-22_at_1.01.01.webp" alt="Enhancements panel with options for Translate text, Visual touch ups, Text improvements and Add video effects" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
-        </section>
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-        <!-- Step 9: Publish and Duplicate Variations -->
-        <section id="publish">
-            <h2 class="section-title">9. Publish and Duplicate Variations</h2>
-            <p>After completing your creative setup, click the <strong>Publish</strong> button at the bottom right of Ads Manager to launch your test campaign. The campaign will run according to the start and end dates you selected earlier.</p>
-            <p>To test multiple videos at once, duplicate your Ad Set after publishing. In each duplicate, replace the video in the <strong>Media</strong> step with a new creative while keeping all other settings identical. This allows you to compare performance across different videos while maintaining consistent targeting, budget and schedule.</p>
-        </section>
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-    </div>
-    <footer class="footer">
-        <p>Last updated on August 29, 2025.</p>
-    </footer>
-</body>
-</html>
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(142, 58, 1, 0.141); }
+.select-value-color-orange { background-color: rgba(213, 96, 0, 0.188); }
+.select-value-color-yellow { background-color: rgba(209, 155, 0, 0.238); }
+.select-value-color-green { background-color: rgba(1, 104, 42, 0.145); }
+.select-value-color-blue { background-color: rgba(45, 149, 218, 0.236); }
+.select-value-color-purple { background-color: rgba(104, 1, 184, 0.125); }
+.select-value-color-pink { background-color: rgba(204, 1, 88, 0.137); }
+.select-value-color-red { background-color: rgba(228, 26, 0, 0.148); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="25deea88-e43e-8031-8172-f6e4522ad15d" class="page sans"><header><h1 class="page-title">How to Ad Test on FB</h1><p class="page-description"></p></header><div class="page-body"><p id="25eeea88-e43e-809c-8506-e333ad4d9382" class="">Predict the performance of your videos before posting them. </p><p id="25eeea88-e43e-80c1-b4ff-de713d982a9b" class="">This is how you check how long people would watch your video for, and see exactly at which points they might drop off and stop watching. </p><p id="25eeea88-e43e-80f8-9435-fd7d4122693b" class="">You will need 3 main elements to create and Ad Test on Facebook:</p><ul id="25eeea88-e43e-80c4-98d2-f4463269f800" class="bulleted-list"><li style="list-style-type:disc">Video </li></ul><ul id="25eeea88-e43e-8040-8406-f2ac2fa6b6a5" class="bulleted-list"><li style="list-style-type:disc">Title</li></ul><ul id="25eeea88-e43e-80b5-8e66-f9d0a56aae3c" class="bulleted-list"><li style="list-style-type:disc">Thumbnail </li></ul><p id="25eeea88-e43e-80de-9964-ffa4b0a76092" class="">
+</p><p id="25eeea88-e43e-80cc-958d-ffc7ba52ab51" class="">Here’s exactly what you need to do. No extra information.</p><p id="25eeea88-e43e-8063-8fcc-d3fdcf785702" class="">If something isn’t mentioned there, you probably don’t need to touch it. </p><p id="25eeea88-e43e-80a9-bb27-fc999aa302af" class="">
+</p><p id="25deea88-e43e-8086-b05d-d5ac4f5d9aeb" class="">Go to <a href="http://adsmanager.facebook.com/">adsmanager.facebook.com</a> and select <strong>Campaigns</strong><em> </em>from the menu on the left. </p><figure id="25deea88-e43e-80a9-b3b7-f92977de3bb8" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-21_at_23.25.42.png"><img style="width:528px" src="notion_assets/Screenshot_2025-08-21_at_23.25.42.png"/></a></figure><p id="25deea88-e43e-80a7-9880-f499efb23aca" class="">
+</p><p id="25deea88-e43e-80cb-a9ed-d09d3d622639" class="">Under the Campaigns tab, click the green [+ Create]<em> </em>button </p><figure id="25deea88-e43e-80d5-8b9a-f01a5322a432" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-21_at_23.26.17.png"><img style="width:672px" src="notion_assets/Screenshot_2025-08-21_at_23.26.17.png"/></a></figure><p id="25deea88-e43e-805b-acd8-ee777869301c" class="">
+</p><p id="25deea88-e43e-8022-b530-c7345130c60b" class="">Select <em>Engagement </em>as the objective of the campaign</p><figure id="25deea88-e43e-80f6-8f3a-cfa52dcf3605" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-21_at_23.27.07.png"><img style="width:672px" src="notion_assets/Screenshot_2025-08-21_at_23.27.07.png"/></a></figure><p id="25deea88-e43e-80f6-8879-eecaf3715bca" class="">
+</p><p id="25deea88-e43e-8017-a4b8-f45f0599b5c0" class="">Select <em>Manual engagement campaign</em></p><figure id="25deea88-e43e-80c2-8a95-e5a8e9b98433" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-21_at_23.27.29.png"><img style="width:672px" src="notion_assets/Screenshot_2025-08-21_at_23.27.29.png"/></a></figure><p id="25deea88-e43e-8017-ad7b-fb9cef541b51" class="">
+</p><p id="25deea88-e43e-809e-bc4b-fb09197cabb5" class="">We will be working with 3 containers. </p><p id="25deea88-e43e-8052-99ce-e3868c66a153" class="">The first is the <strong>Campaign</strong>. Inside of it we have the <strong>Ad Set</strong>. Inside of that we have the <strong>Ad</strong>.</p><p id="25deea88-e43e-8075-92d9-f97fc6cd31ec" class="">Let’s set up the <strong>Campaign</strong> first. All you need to do here is give your advertising campaign a unique name, that will not repeat with other campaigns you create. </p><figure id="25deea88-e43e-80c8-ba4e-d8f8c2a09494" class="image"><a href="notion_assets/Screenshot_2025-08-21_at_23.29.37.png"><img style="width:2830px" src="notion_assets/Screenshot_2025-08-21_at_23.29.37.png"/></a></figure><p id="25deea88-e43e-801b-a244-e6dd8de1255d" class="">
+</p><p id="25deea88-e43e-80f2-a78a-d022a94096c3" class="">Next, we’ll set up the <strong>Ad Set</strong>. </p><p id="25deea88-e43e-80c7-9efd-d6c48820488a" class="">After you give your <strong>Ad Set</strong> a unique name, change the Conversion Location to <em>On your ad.</em></p><figure id="25deea88-e43e-8059-a2eb-e429015bc3dc" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.48.38.png"><img style="width:2994px" src="notion_assets/Screenshot_2025-08-22_at_0.48.38.png"/></a></figure><p id="25deea88-e43e-8026-a02a-e6c00691108f" class="">
+</p><p id="25deea88-e43e-80fb-a075-d74f79e6d100" class="">Your settings under the <em><strong>Conversion</strong></em> section should end up looking like this.</p><figure id="25deea88-e43e-80aa-b378-f236f090f24d" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.48.46.png"><img style="width:2972px" src="notion_assets/Screenshot_2025-08-22_at_0.48.46.png"/></a></figure><p id="25deea88-e43e-8041-bc1f-e8281e304eea" class="">
+</p><p id="25deea88-e43e-80a6-9d45-caea6540bf84" class="">Scroll down to the <em><strong>Budget &amp; schedule</strong></em> section and select <strong>Lifetime budget</strong>. </p><figure id="25deea88-e43e-809f-9a8b-ff3591a7b28c" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_0.50.16.png"><img style="width:528px" src="notion_assets/Screenshot_2025-08-22_at_0.50.16.png"/></a></figure><p id="25deea88-e43e-8027-9c9f-df8f479c9a7a" class="">
+</p><p id="25deea88-e43e-8025-9ca3-cee2b08b80af" class="">Setting your budget between $3-$5 will be enough to help us achieve the result we want - 1,000 impressions. </p><figure id="25deea88-e43e-805b-ba62-dbee9605be93" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.50.30.png"><img style="width:709.96875px" src="notion_assets/Screenshot_2025-08-22_at_0.50.30.png"/></a></figure><p id="25deea88-e43e-8058-a4f5-c4992fc4ff29" class="">
+</p><p id="25deea88-e43e-8010-865b-ea12c82cc94b" class="">Adjust the Start and End dates with the following notes in mind </p><ul id="25deea88-e43e-8025-82bd-e7c8a2805cb9" class="bulleted-list"><li style="list-style-type:disc">They should be 24 hours apart</li></ul><ul id="25deea88-e43e-80fe-995f-f25e584db49c" class="bulleted-list"><li style="list-style-type:disc">Adjust the starting <em>time </em>to have an extra 30 minutes to 1h from the current time. This provisions for processing time of the campaign and you uploading the videos you will test.</li></ul><ul id="25deea88-e43e-800a-8001-d64f089e35dc" class="bulleted-list"><li style="list-style-type:disc">If you’re traveling, there may be a mismatch between your current time zone and the time zone you see when you set up the test. </li></ul><ul id="25deea88-e43e-802c-8c85-c30bbc5b9b5b" class="bulleted-list"><li style="list-style-type:disc">⚠️  After you set this up, double check that your budget has remained the same.</li></ul><figure id="25deea88-e43e-8039-89b4-db7198ad5a3e" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.50.43.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_0.50.43.png"/></a></figure><p id="25deea88-e43e-809b-bcf1-d2f3463d1041" class="">
+</p><p id="25deea88-e43e-8044-b516-f360020bd7ae" class="">Scroll down to the <em>Placements</em> section and as you hover over the <strong>Advantage+ placements</strong>, an <span style="border-bottom:0.05em solid">Edit</span> button will appear on the right. Click it. </p><figure id="25deea88-e43e-8008-953b-d23f5effab7d" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.51.07.png"><img style="width:709.984375px" src="notion_assets/Screenshot_2025-08-22_at_0.51.07.png"/></a></figure><p id="25deea88-e43e-804d-b0b0-e4c349dd6089" class="">
+</p><p id="25deea88-e43e-8011-8d6a-f16f5ad3e950" class="">Select Manual placements.</p><figure id="25deea88-e43e-8067-aeea-f0517643c61d" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.51.23.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_0.51.23.png"/></a></figure><p id="25deea88-e43e-803d-bff6-c95355d8bbe2" class="">
+</p><p id="25deea88-e43e-8020-9ed6-d1fb6cd5389d" class="">Deselect all other platforms, except Facebook. </p><figure id="25deea88-e43e-80ee-9530-c9003a9dc032" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_0.51.41.png"><img style="width:528px" src="notion_assets/Screenshot_2025-08-22_at_0.51.41.png"/></a></figure><p id="25deea88-e43e-80d7-a3a1-fb5f15be10e1" class="">
+</p><p id="25deea88-e43e-80cf-9416-e2f25d8833ba" class="">In <strong>Feeds</strong> select:</p><ul id="25deea88-e43e-80d6-85eb-f963ae4cebeb" class="bulleted-list"><li style="list-style-type:disc">Facebook Feed</li></ul><ul id="25deea88-e43e-8078-b4c4-e0f0820b7c38" class="bulleted-list"><li style="list-style-type:disc">Facebook video feeds</li></ul><figure id="25deea88-e43e-8056-91cb-e38c65a208c9" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_0.53.29.png"><img style="width:528px" src="notion_assets/Screenshot_2025-08-22_at_0.53.29.png"/></a></figure><p id="25deea88-e43e-80b7-807b-e9671f5c5b13" class="">
+</p><p id="25deea88-e43e-806e-b120-c7a16d7db434" class="">In <strong>In-stream ads for reels </strong>select:</p><ul id="25deea88-e43e-801b-b9ee-f2a2dd6e7eaa" class="bulleted-list"><li style="list-style-type:disc">Facebook in-stream reels</li></ul><figure id="25deea88-e43e-8063-8256-d8b571a95c73" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_0.53.48.png"><img style="width:528px" src="notion_assets/Screenshot_2025-08-22_at_0.53.48.png"/></a></figure><p id="25deea88-e43e-80bc-8cbc-ceb089211915" class="">
+</p><p id="25deea88-e43e-8052-aa72-e54e755cfe8d" class="">You will only have your Ad Set showing in 3 placements. </p><figure id="25deea88-e43e-8023-8bc9-e08ab7041431" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.53.19.png"><img style="width:709.984375px" src="notion_assets/Screenshot_2025-08-22_at_0.53.19.png"/></a></figure><p id="25deea88-e43e-80b6-b908-dd1310a60fe2" class="">
+</p><p id="25deea88-e43e-8089-ad19-e3615cfa557b" class="">We’re ready to move to the final <em>container</em> and give a unique name to our <strong>Ad</strong>.</p><figure id="25deea88-e43e-805f-989c-d1e9573a009e" class="image"><a href="notion_assets/Screenshot_2025-08-28_at_15.41.34.png"><img style="width:709.9765625px" src="notion_assets/Screenshot_2025-08-28_at_15.41.34.png"/></a></figure><p id="25deea88-e43e-80e2-be02-eef3ab7e9033" class="">
+</p><p id="25deea88-e43e-80c6-9285-c53ec87f9a84" class="">If you’re working with many Facebook pages, select the one you’d like to create the test for under the <strong>Identity </strong>section of the Ad container. </p><figure id="25deea88-e43e-800c-8163-c91af05d3935" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.55.17.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_0.55.17.png"/></a></figure><p id="25deea88-e43e-80e7-b855-ff2ab98306ac" class="">
+</p><p id="25deea88-e43e-802b-af44-cadd49c80d4c" class="">The fun part! Scroll down to the <strong>Ad Creative</strong> section and click the [Video ad] button</p><figure id="25deea88-e43e-80bc-8ee9-fc3f3df5aa69" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.55.42.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_0.55.42.png"/></a></figure><p id="25deea88-e43e-801e-96b4-e61da0453360" class="">
+</p><p id="25deea88-e43e-8054-8c9e-dd75a42bbe87" class="">This is your Media library. It’s like a folder of videos that will stay in the Ads manager platform. You can upload multiple videos at the same time here. </p><p id="25eeea88-e43e-806c-b0d2-d25e5e4f2965" class="">Go ahead and click the [Upload] button at the top right. Once the videos are uploaded from your computer into the Media library, select the video that you will test and hit [Next]</p><figure id="25deea88-e43e-80d4-a384-ca6d893f1895" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_0.57.57.png"><img style="width:3670px" src="notion_assets/Screenshot_2025-08-22_at_0.57.57.png"/></a></figure><p id="25eeea88-e43e-80d7-8e7b-e3e6681a4222" class="">
+</p><p id="25eeea88-e43e-80b7-945a-cff565dbe2f3" class="">The next steps on the left are about tweaking your video. You have probably already done that in the edit, so you can skip most of them. The one you want to look into is <strong>Text. </strong></p><figure id="25eeea88-e43e-807f-8a7a-d4b0127877a8" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_0.59.59.png"><img style="width:384px" src="notion_assets/Screenshot_2025-08-22_at_0.59.59.png"/></a></figure><p id="25eeea88-e43e-80ba-a221-e45a65bff085" class="">
+</p><p id="25eeea88-e43e-80af-b517-c65ef8e719a5" class="">This is where you will write the Title that you want to test for your video. </p><figure id="25eeea88-e43e-8082-9a81-dab4fdb8ad34" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.00.43.png"><img style="width:2790px" src="notion_assets/Screenshot_2025-08-22_at_1.00.43.png"/></a></figure><p id="25eeea88-e43e-80f4-a60b-fccdcf92b24e" class="">
+</p><p id="25eeea88-e43e-8067-a40b-fc41699bd4aa" class="">The last, <em>Enhancements</em>, step will suggest visual touch ups and AI enhancements to your creative (video). Let’s keep those off, so that we test something that will be as close as possible to the actual video you will post. </p><figure id="25eeea88-e43e-800b-8ffd-d312a392f76d" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.01.01.png"><img style="width:3616px" src="notion_assets/Screenshot_2025-08-22_at_1.01.01.png"/></a></figure><p id="25eeea88-e43e-805f-8cc9-e9f950163a3e" class="">
+</p><p id="25eeea88-e43e-8086-befe-e483633d8db0" class="">Now that you can see your video in the <strong>Ad creative</strong> section, we’re going to select a thumbnail.</p><p id="25eeea88-e43e-80d4-b7e8-df25083fa4c0" class="">Click [Edit Media], then [Edit Video] </p><figure id="25eeea88-e43e-809b-a999-df02c3191ab6" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.17.57.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_1.17.57.png"/></a></figure><p id="25eeea88-e43e-8096-b05f-c00735c22f6e" class="">
+</p><p id="25eeea88-e43e-8088-b52a-db844a15514b" class="">On the left side of this pop-up screen, select <strong>Thumbnail</strong>.</p><p id="25eeea88-e43e-80cb-b989-e87e4c54b722" class="">Then, select (Manual). </p><p id="25eeea88-e43e-801b-b5ea-df8ea26f44fd" class="">You can either choose one of the suggested thumbnails, or hit the [Upload] button and add your own image. </p><figure id="25eeea88-e43e-800b-8b8b-c3b3775ffa72" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.18.40.png"><img style="width:2140px" src="notion_assets/Screenshot_2025-08-22_at_1.18.40.png"/></a></figure><p id="25eeea88-e43e-804b-ad26-da9e57ea87cf" class="">
+</p><p id="25eeea88-e43e-8057-a849-db5aedb38874" class="">Don’t forget to click [Save] at the bottom right.</p><figure id="25eeea88-e43e-8063-8acd-dfec9571d886" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-28_at_18.43.03.png"><img style="width:436px" src="notion_assets/Screenshot_2025-08-28_at_18.43.03.png"/></a></figure><p id="25eeea88-e43e-8034-b5ed-d4be4075f1b1" class="">
+</p><p id="25eeea88-e43e-80ac-8486-f1a91847e1ae" class="">
+</p><p id="25eeea88-e43e-8021-9498-d78699ae0488" class="">You can stop here, hit [Publish] and move on. </p><p id="25eeea88-e43e-8015-b26c-eb86019cfc46" class="">But our Pro Creators would test variations in the 3 main elements (Video, Title, Thumbnail) to see the difference in performance. </p><p id="25eeea88-e43e-80fd-b616-c63b891a9fca" class="">The best element to test variations for is your <span style="border-bottom:0.05em solid">video</span>. You can test different edits of the same video. The opening shot is the most impactful thing to the performance - try editing and testing different versions of that with priority. </p><p id="25eeea88-e43e-80f7-9599-fd40622224a4" class="">You can also change the Title and the Thumbnail and test how that affects performance. Usually we see a much lower impact than the video. </p><p id="25eeea88-e43e-8001-9170-ee98b68806d1" class="">
+</p><p id="25eeea88-e43e-80c1-8724-ce544d56a6ff" class="">
+</p><p id="25eeea88-e43e-8040-b52c-f95499f2aa23" class="">Alright, this is how you’ll create the next variation in your test. </p><p id="25eeea88-e43e-80c1-8ef6-dec9a793a994" class="">Click the three dots next to the <strong>Ad Set </strong>and select Duplicate.</p><figure id="25eeea88-e43e-80a7-8344-f7510651391d" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.02.11.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_1.02.11.png"/></a></figure><p id="25eeea88-e43e-80b6-91ff-d08599897039" class="">
+</p><p id="25eeea88-e43e-80f7-a6f0-f8e6e8541da7" class="">On the next screen, choose to duplicate it under the Existing, Original campaign. </p><figure id="25eeea88-e43e-80a1-881c-f11f93261ab6" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.02.27.png"><img style="width:709.984375px" src="notion_assets/Screenshot_2025-08-22_at_1.02.27.png"/></a></figure><p id="25eeea88-e43e-80e6-85f3-ca437c1cc509" class="">
+</p><p id="25eeea88-e43e-8053-a2bc-e4734fcae93b" class="">Now you have two <strong>Ad Sets</strong> under the same <strong>Campaign</strong>. </p><p id="25eeea88-e43e-8012-a5d9-d7cb7edd93ce" class="">Let’s give the second <strong>Ad Set</strong> and the second <strong>Ad </strong>a unique name. </p><figure id="25eeea88-e43e-8009-bf2d-f59c7e023afb" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.03.20.png"><img style="width:2470px" src="notion_assets/Screenshot_2025-08-22_at_1.03.20.png"/></a></figure><p id="25eeea88-e43e-80c5-bb53-f37abbac8a16" class="">
+</p><p id="25eeea88-e43e-8004-bdea-ec7651127bda" class="">Next, you’ll click into the second <strong>Ad </strong>and scroll to the <strong>Ad Creative</strong> section.</p><p id="25eeea88-e43e-80ab-a45d-c64377db7d43" class="">Click [Edit Media], then [Change Video] and add the second video you will test. You can follow the same process as above. </p><figure id="25eeea88-e43e-80b0-bfde-e0cef9e257a3" class="image"><a href="notion_assets/Screenshot_2025-08-22_at_1.03.49.png"><img style="width:709.9921875px" src="notion_assets/Screenshot_2025-08-22_at_1.03.49.png"/></a></figure><p id="25eeea88-e43e-8056-96ea-e2ec27c0772f" class="">
+</p><p id="25eeea88-e43e-8025-95f5-c6864cf59a2c" class="">You can duplicate the <strong>Ad Set</strong> and change the video as many times as you want by following the same steps. Most creators usually test 2 or 3 <strong>Ad Sets</strong> at a time. </p><p id="25eeea88-e43e-80bc-b334-e7c56d7bdb16" class="">Once you’re done setting everything up, click back into the <strong>Campaign </strong>container at the top left. This will make sure your whole campaign gets published.</p><figure id="25eeea88-e43e-80c2-ba0b-f65a281e14fe" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-28_at_18.57.32.png"><img style="width:576px" src="notion_assets/Screenshot_2025-08-28_at_18.57.32.png"/></a></figure><p id="25eeea88-e43e-80f5-a6eb-db509b432e7b" class="">
+</p><p id="25eeea88-e43e-8044-bec0-d86629a4641b" class="">Finally, click the green [Publish] button at the bottom right. </p><figure id="25eeea88-e43e-805b-84fc-fd8a9b6a870c" class="image" style="text-align:left"><a href="notion_assets/Screenshot_2025-08-22_at_1.05.49.png"><img style="width:576px" src="notion_assets/Screenshot_2025-08-22_at_1.05.49.png"/></a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
