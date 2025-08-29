@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Ad Test on Facebook</title>
+    <title>How to Ad Test on FB</title>
     <style>
         /* Global styles */
         body {
@@ -67,9 +67,6 @@
             color: #1e40af;
             margin-bottom: 0.5rem;
         }
-        .subtext {
-            margin-bottom: 1.5rem;
-        }
         ul {
             margin: 0 0 1rem 1.5rem;
         }
@@ -88,75 +85,120 @@
     <!-- Hero section -->
     <div class="hero">
         <div class="hero-text">
-            <h1>How to Ad Test on Facebook</h1>
-            <p>A practical guide to designing and running Facebook ad tests</p>
+            <h1>How to Ad Test on FB</h1>
+            <p>Predict the performance of your videos before posting them.</p>
         </div>
     </div>
     <div class="container">
         <!-- Introduction -->
         <section id="introduction">
             <h2 class="section-title">Introduction</h2>
-            <p class="subtext">Predict the performance of your videos before posting them. This guide will help you set up effective ad tests on Facebook and understand how long people watch your video and where they drop off.</p>
-            <p>You'll need three core elements to run a test:</p>
+            <p>This is how you check how long people would watch your video for, and see exactly at which points they might drop off and stop watching.</p>
+            <p>You will need 3 main elements to create an Ad Test on Facebook:</p>
             <ul>
-                <li><strong>Video:</strong> The creative itself—what your audience will watch.</li>
-                <li><strong>Title:</strong> A headline that grabs attention and sets expectations.</li>
-                <li><strong>Thumbnail:</strong> The image that entices viewers to press play.</li>
+                <li>Video</li>
+                <li>Title</li>
+                <li>Thumbnail</li>
             </ul>
-            <p>If something isn't mentioned in this guide, you probably don't need to touch it. We'll focus only on what matters for an efficient test.</p>
+            <p>Here’s exactly what you need to do. No extra information.</p>
+            <p>If something isn’t mentioned here, you probably don’t need to touch it.</p>
         </section>
-        <!-- Campaign Setup -->
+        <!-- Step 1: Access Ads Manager -->
+        <section id="adsmanager">
+            <h2 class="section-title">1. Access Ads Manager</h2>
+            <p>Go to <a href="https://adsmanager.facebook.com" target="_blank" rel="noopener">adsmanager.facebook.com</a> and select <strong>Campaigns</strong> from the menu on the left.</p>
+            <!-- Image 0: Meta Ads Manager menu showing Campaigns selected -->
+            <img src="Screenshot_2025-08-21_at_23.25.42.webp" alt="Meta Ads Manager menu showing the Campaigns tab selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+            <p>Under the <strong>Campaigns</strong> tab, click the green <strong>[+ Create]</strong> button.</p>
+            <!-- Image 1: Campaigns interface with All ads and Create button -->
+            <img src="Screenshot_2025-08-21_at_23.26.17.webp" alt="Campaigns interface showing All ads tab and a large green Create button" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+        </section>
+
+        <!-- Step 2: Choose Campaign Objective -->
+        <section id="objective">
+            <h2 class="section-title">2. Choose the Campaign Objective</h2>
+            <p>Select <strong>Engagement</strong> as the objective of the campaign.</p>
+            <!-- Image 2: Engagement objective selection popup -->
+            <img src="Screenshot_2025-08-21_at_23.27.07.webp" alt="Create new campaign pop‑up showing Engagement objective selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+        </section>
+
+        <!-- Step 3: Choose Campaign Setup -->
+        <section id="setup">
+            <h2 class="section-title">3. Choose the Campaign Setup</h2>
+            <p>When prompted to choose a campaign setup, pick <strong>Manual engagement campaign</strong> for full control over settings.</p>
+            <!-- Image 3: Manual engagement campaign selection -->
+            <img src="Screenshot_2025-08-21_at_23.27.29.webp" alt="Popup showing the option to choose a Manual engagement campaign" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+        </section>
+
+        <!-- Step 4: Create the Campaign -->
         <section id="campaign">
-            <h2 class="section-title">Step 1: Create Your Campaign</h2>
-            <p>Select <strong>Engagement</strong> as your campaign objective in Meta Ads Manager. Engagement campaigns are great for collecting messages, video views, post engagement, Page likes, and event responses.</p>
-            <p>Under campaign settings:</p>
-            <ul>
-                <li>Pick a unique name for your campaign that clearly describes the test.</li>
-                <li>Use the default buying type (Auction) unless you have a specific reason to change it.</li>
-                <li>Ensure "Engagement" is selected as the objective.</li>
-            </ul>
-            <p>Keep things simple—don't worry about optional settings like split tests or dynamic creative at this stage.</p>
+            <h2 class="section-title">4. Create the Campaign</h2>
+            <p>We will be working with <strong>three containers</strong>: the <em>Campaign</em>, the <em>Ad Set</em>, and the <em>Ad</em>.</p>
+            <p>Let’s set up the <strong>Campaign</strong> first. All you need to do here is give your advertising campaign a unique name that will not repeat with other campaigns you create.</p>
+            <!-- Image 4: Campaign name input field -->
+            <img src="Screenshot_2025-08-21_at_23.29.37.webp" alt="Campaign settings screen showing a field to enter a unique campaign name" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
         </section>
-        <!-- Ad Set Setup -->
+
+        <!-- Step 5: Configure the Ad Set -->
         <section id="adset">
-            <h2 class="section-title">Step 2: Configure Your Ad Set</h2>
-            <p>The ad set is where you choose your audience and placements. Start by naming your ad set something descriptive (e.g., <em>VideoTest_Audience1</em>).</p>
-            <p>Key settings:</p>
-            <ul>
-                <li><strong>Conversion Location:</strong> Set to <em>On your ad</em> to count engagement directly on the ad.</li>
-                <li><strong>Engagement Type:</strong> Choose <em>Video views</em> to optimise for video play time.</li>
-                <li><strong>Performance Goal:</strong> Use <em>ThruPlay views</em> to maximise the number of viewers who watch at least 15 seconds.</li>
-                <li><strong>Budget:</strong> Select a <em>Lifetime budget</em>. A budget of $3–$5 per ad set is typically enough to achieve around 1,000 impressions.</li>
-                <li><strong>Schedule:</strong> Choose start and end dates that are at least 24 hours apart. Add an extra hour after your current time to account for ad review and upload time.</li>
-            </ul>
+            <h2 class="section-title">5. Configure the Ad Set</h2>
+            <p>Next, we’ll set up the Ad Set. After giving your Ad Set a unique name, change the <strong>Conversion location</strong> to <em>On your ad</em>.</p>
+            <!-- Image 5: Ad set with conversion location drop‑down open -->
+            <img src="Screenshot_2025-08-22_at_0.48.38.webp" alt="Ad set settings showing conversion location drop‑down with 'On your ad' selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+            <p>Your settings under the <strong>Conversion</strong> section should look like this:</p>
+            <!-- Image 6: Conversion settings including engagement type and performance goal -->
+            <img src="Screenshot_2025-08-22_at_0.48.46.webp" alt="Conversion settings showing Engagement type set to Video views and Performance goal set to Maximise ThruPlay views" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
         </section>
-        <!-- Placements and Delivery -->
-        <section id="placements">
-            <h2 class="section-title">Step 3: Select Placements</h2>
-            <p>Under the <strong>Placements</strong> section, hover over <em>Advantage+</em> placements and click <strong>Edit</strong>. Select <em>Manual placements</em> and enable only the Facebook feed. This ensures your test has consistent placement and reduces variables.</p>
-            <p>Leave other delivery settings at their defaults to keep the test straightforward.</p>
+
+        <!-- Step 6: Set Budget and Schedule -->
+        <section id="budget">
+            <h2 class="section-title">6. Set Budget & Schedule</h2>
+            <p>Scroll down to the <strong>Budget & schedule</strong> section and select <em>Lifetime budget</em>. A lifetime budget between <strong>$3–$5</strong> will usually be enough to achieve about <strong>1,000 impressions</strong>.</p>
+            <!-- Image 7: Budget drop‑down showing Lifetime budget selected -->
+            <img src="Screenshot_2025-08-22_at_0.50.16.webp" alt="Budget & schedule section with Lifetime budget selected" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+            <p>Adjust the <strong>Start</strong> and <strong>End</strong> dates so they are 24 hours apart. It helps to start the campaign 30 minutes to 1 hour after the current time to account for processing and uploading videos. If you’re travelling, keep an eye on time zones. After making these changes, double‑check that your budget hasn’t been altered.</p>
         </section>
-        <!-- Creative Testing -->
+
+        <!-- Step 7: Identity Selection -->
+        <section id="identity">
+            <h2 class="section-title">7. Identity Selection</h2>
+            <p>If you’re working with many Facebook pages, select the one you’d like to create the test for under the <strong>Identity</strong> section of the Ad container.</p>
+            <!-- Image 17: Identity dropdown -->
+            <img src="Screenshot_2025-08-22_at_0.55.17.webp" alt="Facebook Page identity selection dropdown" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+        </section>        <!-- Step 8: Set up your Creative -->
         <section id="creative">
-            <h2 class="section-title">Step 4: Design Your Ads</h2>
-            <p>Within each ad set, create one ad for each creative variation you want to test. Change only one element at a time so you can accurately measure its effect.</p>
+            <h2 class="section-title">8. Set up your Creative</h2>
+            <p>Once your Ad Set has been configured, scroll down to the <strong>Ad</strong> container and click <em>New Ad</em>. This section guides you through uploading your video and preparing the creative. Meta organises these tasks into a series of steps:</p>
             <ul>
-                <li><strong>Video:</strong> Test different video cuts, intros, or overlays.</li>
-                <li><strong>Title:</strong> Experiment with headlines that emphasise benefits, curiosity, or urgency.</li>
-                <li><strong>Thumbnail:</strong> Try contrasting colours, faces, or icons to see what catches attention best.</li>
+                <li><strong>Media</strong> – Upload the video you’d like to test.</li>
+                <li><strong>Trim</strong> – Skip trimming; you should always test the full video.</li>
+                <li><strong>Crop</strong> – Skip cropping to preserve your original aspect ratio.</li>
+                <li><strong>Text</strong> – Add a primary text option or leave blank if you only want to analyse video performance.</li>
+                <li><strong>Enhancements</strong> – Keep enhancements turned off so your video isn’t altered by AI features.</li>
             </ul>
-            <p>Keep the call-to-action consistent across all ads. Use succinct copy and avoid changes to targeting between creatives.</p>
+            <!-- Image 8: Media library with video thumbnails -->
+            <img src="Screenshot_2025-08-22_at_0.57.57.webp" alt="Media library showing video thumbnails during the Media step" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+            <p>During the <strong>Media</strong> step, select the video you want to test from your account’s media library or upload a new file. Only one video can be selected for each ad.</p>
+            <!-- Image 9: Creative step indicator (Media, Trim, Crop, Text, Enhancements) -->
+            <img src="Screenshot_2025-08-22_at_0.59.59.webp" alt="Set up your creative vertical step indicator showing Media, Trim, Crop, Text and Enhancements" style="width:100%;max-width:400px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem auto;display:block;">
+            <p>Meta will guide you through each step. You can skip the <strong>Trim</strong> and <strong>Crop</strong> steps since this test should use your full‑length video. In the <strong>Text</strong> step, add a simple headline or leave it blank if you only want to measure how well the video itself holds attention.</p>
+            <!-- Image 10: Text editing area -->
+            <img src="Screenshot_2025-08-22_at_1.00.43.webp" alt="Text step showing a primary text box for adding a caption" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
+            <p>When you reach the <strong>Enhancements</strong> panel, turn off all options (Translate text, Visual touch‑ups, Text improvements and Add video effects) to ensure your creative is not altered. Meta’s AI enhancements can change the look and feel of your ad, so leave them disabled for an accurate test.</p>
+            <!-- Image 11: Enhancements panel -->
+            <img src="Screenshot_2025-08-22_at_1.01.01.webp" alt="Enhancements panel with options for Translate text, Visual touch ups, Text improvements and Add video effects" style="width:100%;max-width:700px;border:1px solid #e5e7eb;border-radius:8px;margin:1rem 0;">
         </section>
-        <!-- Results Analysis -->
-        <section id="analysis">
-            <h2 class="section-title">Step 5: Analyse and Iterate</h2>
-            <p>Once your test completes, review the results in Ads Manager. Compare metrics like ThruPlay cost, watch time, and click-through rate (CTR) across variations.</p>
-            <p>Scale the top-performing creative by increasing its budget or duplicating the ad into a new campaign. Pause underperforming ads, and apply insights to future tests.</p>
-            <p>Repeat the process, experimenting with new ideas while keeping one variable at a time. Systematic testing helps you continuously improve your ads and maximise ROI.</p>
+
+        <!-- Step 9: Publish and Duplicate Variations -->
+        <section id="publish">
+            <h2 class="section-title">9. Publish and Duplicate Variations</h2>
+            <p>After completing your creative setup, click the <strong>Publish</strong> button at the bottom right of Ads Manager to launch your test campaign. The campaign will run according to the start and end dates you selected earlier.</p>
+            <p>To test multiple videos at once, duplicate your Ad Set after publishing. In each duplicate, replace the video in the <strong>Media</strong> step with a new creative while keeping all other settings identical. This allows you to compare performance across different videos while maintaining consistent targeting, budget and schedule.</p>
         </section>
+
     </div>
     <footer class="footer">
-        <p>Guide created by Kosta &middot; Last updated on August 29, 2025.</p>
+        <p>Last updated on August 29, 2025.</p>
     </footer>
 </body>
 </html>
