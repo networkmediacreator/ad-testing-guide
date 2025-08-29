@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Ad Test on Facebook - Network Media Creator</title>
+    <title>How to Ad Test on FB - Network Media Creator</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,47 +17,45 @@
             --black: #000000;
             --light-blue: #2394bb;
             --dark-blue: #135ea0;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
+            --dark-bg: #0f1419;
+            --dark-card: #1a1f2e;
+            --dark-border: #2a3441;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--gray-800);
-            background-color: var(--gray-50);
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            min-height: 100vh;
         }
 
         .header {
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
-            padding: 1rem 0;
+            background: var(--dark-card);
+            border-bottom: 1px solid var(--dark-border);
+            padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .logo {
-            height: 40px;
+            height: 48px;
             width: auto;
+            filter: brightness(1.1);
         }
 
         .header-text {
@@ -65,207 +63,244 @@
         }
 
         .header-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--dark-blue);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
             margin: 0;
+            letter-spacing: -0.025em;
         }
 
         .header-subtitle {
-            font-size: 0.875rem;
-            color: var(--gray-600);
+            font-size: 1rem;
+            color: var(--text-secondary);
             margin: 0;
+            margin-top: 0.25rem;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 320px 1fr;
             gap: 3rem;
+            min-height: calc(100vh - 120px);
         }
 
         .sidebar {
             position: sticky;
-            top: 120px;
+            top: 140px;
             height: fit-content;
         }
 
         .progress-nav {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
         }
 
         .progress-title {
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.025em;
         }
 
         .progress-item {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.5rem 0;
+            gap: 1rem;
+            padding: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s ease;
-            border-radius: 6px;
-            padding: 0.5rem;
-            margin-bottom: 0.25rem;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            border: 1px solid transparent;
         }
 
         .progress-item:hover {
-            background: var(--gray-50);
+            background: rgba(35, 148, 187, 0.1);
+            border-color: rgba(35, 148, 187, 0.3);
         }
 
         .progress-number {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--gray-200);
-            color: var(--gray-600);
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--dark-border);
+            color: var(--text-secondary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             font-weight: 600;
             flex-shrink: 0;
+            transition: all 0.3s ease;
         }
 
         .progress-item.active .progress-number {
             background: var(--light-blue);
             color: var(--white);
+            box-shadow: 0 0 20px rgba(35, 148, 187, 0.4);
         }
 
         .progress-text {
             font-size: 0.875rem;
-            color: var(--gray-700);
+            color: var(--text-secondary);
             line-height: 1.4;
+            font-weight: 500;
+        }
+
+        .progress-item.active .progress-text {
+            color: var(--white);
         }
 
         .main-content {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 16px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
         }
 
         .intro {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--gray-200);
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--dark-border);
         }
 
         .intro-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
         }
 
         .intro-description {
             font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .requirements {
-            background: var(--gray-50);
-            border-radius: 8px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--light-blue);
+            background: rgba(35, 148, 187, 0.1);
+            border: 1px solid rgba(35, 148, 187, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
         }
 
         .requirements-title {
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            color: var(--dark-blue);
-            margin-bottom: 0.75rem;
+            color: var(--white);
+            margin-bottom: 1rem;
         }
 
         .requirements-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .requirements-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: var(--gray-700);
+            gap: 0.75rem;
+            font-size: 1rem;
+            color: var(--text-primary);
         }
 
         .requirements-icon {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             background: var(--light-blue);
-            border-radius: 50%;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-size: 0.75rem;
             flex-shrink: 0;
+            font-weight: 600;
         }
 
         .step {
-            margin-bottom: 3rem;
-            scroll-margin-top: 120px;
+            margin-bottom: 4rem;
+            scroll-margin-top: 140px;
         }
 
         .step-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--light-blue);
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--light-blue), var(--dark-blue));
             color: var(--white);
-            border-radius: 50%;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 600;
-            font-size: 1.125rem;
+            font-weight: 700;
+            font-size: 1.25rem;
             flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(35, 148, 187, 0.3);
         }
 
         .step-title {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: var(--dark-blue);
+            color: var(--white);
             margin: 0;
+            letter-spacing: -0.025em;
         }
 
         .step-content {
-            margin-left: 56px;
+            margin-left: 64px;
         }
 
         .step-description {
             font-size: 1rem;
-            color: var(--gray-700);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .step-description a {
+            color: var(--light-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .step-description a:hover {
+            color: var(--white);
         }
 
         .screenshot {
-            margin: 1.5rem 0;
-            border-radius: 8px;
+            margin: 2rem 0;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--gray-200);
+            border: 1px solid var(--dark-border);
+            transition: all 0.3s ease;
+            background: var(--dark-bg);
+        }
+
+        .screenshot:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(35, 148, 187, 0.5);
         }
 
         .screenshot img {
@@ -275,103 +310,168 @@
         }
 
         .substeps {
-            background: var(--gray-50);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
+            background: rgba(19, 94, 160, 0.1);
+            border: 1px solid rgba(19, 94, 160, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
         }
 
         .substeps-title {
-            font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
         }
 
         .substeps-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .substep {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            font-size: 0.875rem;
-            color: var(--gray-700);
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.6;
         }
 
         .substep-bullet {
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             background: var(--light-blue);
             border-radius: 50%;
-            margin-top: 0.5rem;
+            margin-top: 0.6rem;
             flex-shrink: 0;
         }
 
         .highlight {
-            background: linear-gradient(120deg, rgba(35, 148, 187, 0.1) 0%, rgba(35, 148, 187, 0.05) 100%);
-            padding: 0.125rem 0.375rem;
-            border-radius: 4px;
-            font-weight: 500;
-            color: var(--dark-blue);
+            background: linear-gradient(120deg, rgba(35, 148, 187, 0.2) 0%, rgba(35, 148, 187, 0.1) 100%);
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--light-blue);
+            border: 1px solid rgba(35, 148, 187, 0.3);
         }
 
         .warning {
-            background: #fef3cd;
-            border: 1px solid #fde047;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .warning-icon {
             color: #f59e0b;
             font-weight: 600;
             flex-shrink: 0;
+            font-size: 1.125rem;
         }
 
         .warning-text {
-            font-size: 0.875rem;
-            color: #92400e;
-        }
-
-        .pro-tip {
-            background: linear-gradient(135deg, var(--light-blue), var(--dark-blue));
-            color: var(--white);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .pro-tip-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .pro-tip-text {
-            font-size: 0.875rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            color: var(--text-primary);
             line-height: 1.6;
         }
 
+        .pro-tip {
+            background: linear-gradient(135deg, var(--dark-blue), var(--light-blue));
+            color: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(35, 148, 187, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pro-tip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .pro-tip-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .pro-tip-text {
+            font-size: 1rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            position: relative;
+        }
+
         .code {
-            background: var(--gray-100);
-            border: 1px solid var(--gray-200);
+            background: var(--dark-bg);
+            border: 1px solid var(--dark-border);
             border-radius: 6px;
-            padding: 0.25rem 0.5rem;
+            padding: 0.375rem 0.75rem;
             font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
             font-size: 0.875rem;
-            color: var(--dark-blue);
+            color: var(--light-blue);
+            font-weight: 500;
+        }
+
+        strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--light-blue);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .bulleted-list {
+            margin: 1rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .bulleted-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .bulleted-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            margin-top: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 280px 1fr;
+                gap: 2rem;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -397,16 +497,19 @@
             .step-header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 0.75rem;
+                gap: 1rem;
             }
         }
 
         @media (max-width: 640px) {
             .header-content {
                 padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
 
-            .intro-title {
+            .header-title {
                 font-size: 1.5rem;
             }
 
@@ -415,12 +518,40 @@
             }
 
             .main-content {
-                padding: 1.5rem;
+                padding: 2rem;
+            }
+
+            .intro-title {
+                font-size: 2rem;
             }
         }
 
         .smooth-scroll {
             scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--dark-border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--light-blue);
+        }
+
+        /* Selection styling */
+        ::selection {
+            background: rgba(35, 148, 187, 0.3);
+            color: var(--white);
         }
     </style>
 </head>
@@ -429,8 +560,8 @@
         <div class="header-content">
             <img src="public/2025 NM Icon_Circle.png" alt="Network Media Creator" class="logo">
             <div class="header-text">
-                <h1 class="header-title">Facebook Ad Testing Guide</h1>
-                <p class="header-subtitle">Step-by-step tutorial for creating effective ad campaigns</p>
+                <h1 class="header-title">How to Ad Test on FB</h1>
+                <p class="header-subtitle">Complete step-by-step guide for Facebook ad testing</p>
             </div>
         </div>
     </header>
@@ -457,34 +588,38 @@
                 </div>
                 <div class="progress-item" data-step="4">
                     <div class="progress-number">4</div>
-                    <div class="progress-text">Campaign Setup</div>
+                    <div class="progress-text">Campaign Type</div>
                 </div>
                 <div class="progress-item" data-step="5">
                     <div class="progress-number">5</div>
-                    <div class="progress-text">Ad Set Configuration</div>
+                    <div class="progress-text">Campaign Setup</div>
                 </div>
                 <div class="progress-item" data-step="6">
                     <div class="progress-number">6</div>
-                    <div class="progress-text">Budget & Schedule</div>
+                    <div class="progress-text">Ad Set Configuration</div>
                 </div>
                 <div class="progress-item" data-step="7">
                     <div class="progress-number">7</div>
-                    <div class="progress-text">Placement Settings</div>
+                    <div class="progress-text">Budget & Schedule</div>
                 </div>
                 <div class="progress-item" data-step="8">
                     <div class="progress-number">8</div>
-                    <div class="progress-text">Ad Creative Setup</div>
+                    <div class="progress-text">Placement Settings</div>
                 </div>
                 <div class="progress-item" data-step="9">
                     <div class="progress-number">9</div>
-                    <div class="progress-text">Video & Thumbnail</div>
+                    <div class="progress-text">Ad Creative Setup</div>
                 </div>
                 <div class="progress-item" data-step="10">
                     <div class="progress-number">10</div>
-                    <div class="progress-text">Testing Variations</div>
+                    <div class="progress-text">Video & Thumbnail</div>
                 </div>
                 <div class="progress-item" data-step="11">
                     <div class="progress-number">11</div>
+                    <div class="progress-text">Testing Variations</div>
+                </div>
+                <div class="progress-item" data-step="12">
+                    <div class="progress-number">12</div>
                     <div class="progress-text">Publish Campaign</div>
                 </div>
             </nav>
@@ -492,28 +627,32 @@
 
         <main class="main-content">
             <section class="intro" id="intro">
-                <h1 class="intro-title">How to Ad Test on Facebook</h1>
-                <p class="intro-description">
-                    Predict the performance of your videos before posting them. This guide shows you how to check how long people would watch your video for, and see exactly at which points they might drop off and stop watching.
-                </p>
+                <h1 class="intro-title">How to Ad Test on FB</h1>
+                <div class="intro-description">
+                    <p>Predict the performance of your videos before posting them.</p>
+                    <p>This is how you check how long people would watch your video for, and see exactly at which points they might drop off and stop watching.</p>
+                </div>
                 
                 <div class="requirements">
-                    <h3 class="requirements-title">What You'll Need</h3>
+                    <h3 class="requirements-title">You will need 3 main elements to create and Ad Test on Facebook:</h3>
                     <ul class="requirements-list">
                         <li class="requirements-item">
                             <div class="requirements-icon">📹</div>
-                            Video content to test
+                            Video
                         </li>
                         <li class="requirements-item">
                             <div class="requirements-icon">📝</div>
-                            Title variations
+                            Title
                         </li>
                         <li class="requirements-item">
                             <div class="requirements-icon">🖼️</div>
-                            Thumbnail options
+                            Thumbnail
                         </li>
                     </ul>
                 </div>
+                
+                <p style="margin-top: 2rem; color: var(--text-secondary);">Here's exactly what you need to do. No extra information.</p>
+                <p style="color: var(--text-secondary);">If something isn't mentioned there, you probably don't need to touch it.</p>
             </section>
 
             <div class="step" id="step-1">
@@ -523,10 +662,10 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Go to <a href="http://adsmanager.facebook.com/" class="highlight">adsmanager.facebook.com</a> and select <span class="highlight">Campaigns</span> from the menu on the left.
+                        Go to <a href="http://adsmanager.facebook.com/">adsmanager.facebook.com</a> and select <strong>Campaigns</strong> from the menu on the left.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-21_at_23.25.42.png" alt="Facebook Ads Manager Campaigns Tab">
+                        <img src="Screenshot_2025-08-21_at_23.25.42.png" alt="Facebook Ads Manager Campaigns Tab">
                     </div>
                 </div>
             </div>
@@ -538,10 +677,10 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Under the Campaigns tab, click the green <span class="highlight">[+ Create]</span> button to start creating your new ad campaign.
+                        Under the Campaigns tab, click the green <span class="highlight">[+ Create]</span> button
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-21_at_23.26.17.png" alt="Create Campaign Button">
+                        <img src="Screenshot_2025-08-21_at_23.26.17.png" alt="Create Campaign Button">
                     </div>
                 </div>
             </div>
@@ -553,10 +692,10 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Select <span class="highlight">Engagement</span> as the objective of the campaign. This objective is specifically designed for testing video performance and engagement metrics.
+                        Select <em>Engagement</em> as the objective of the campaign
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-21_at_23.27.07.png" alt="Select Engagement Objective">
+                        <img src="Screenshot_2025-08-21_at_23.27.07.png" alt="Select Engagement Objective">
                     </div>
                 </div>
             </div>
@@ -568,10 +707,10 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Select <span class="highlight">Manual engagement campaign</span> to have full control over your ad testing parameters.
+                        Select <em>Manual engagement campaign</em>
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-21_at_23.27.29.png" alt="Manual Engagement Campaign">
+                        <img src="Screenshot_2025-08-21_at_23.27.29.png" alt="Manual Engagement Campaign">
                     </div>
                 </div>
             </div>
@@ -583,10 +722,16 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        We'll be working with 3 containers: the <span class="highlight">Campaign</span>, inside of it the <span class="highlight">Ad Set</span>, and inside of that the <span class="highlight">Ad</span>. Give your advertising campaign a unique name that won't repeat with other campaigns you create.
+                        We will be working with 3 containers.
+                    </p>
+                    <p class="step-description">
+                        The first is the <strong>Campaign</strong>. Inside of it we have the <strong>Ad Set</strong>. Inside of that we have the <strong>Ad</strong>.
+                    </p>
+                    <p class="step-description">
+                        Let's set up the <strong>Campaign</strong> first. All you need to do here is give your advertising campaign a unique name, that will not repeat with other campaigns you create.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-21_at_23.29.37.png" alt="Campaign Name Setup">
+                        <img src="Screenshot_2025-08-21_at_23.29.37.png" alt="Campaign Name Setup">
                     </div>
                 </div>
             </div>
@@ -598,16 +743,19 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        After giving your <span class="highlight">Ad Set</span> a unique name, change the Conversion Location to <span class="highlight">On your ad</span>.
+                        Next, we'll set up the <strong>Ad Set</strong>.
+                    </p>
+                    <p class="step-description">
+                        After you give your <strong>Ad Set</strong> a unique name, change the Conversion Location to <em>On your ad.</em>
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.48.38.png" alt="Ad Set Configuration">
+                        <img src="Screenshot_2025-08-22_at_0.48.38.png" alt="Ad Set Configuration">
                     </div>
                     <p class="step-description">
-                        Your settings under the <span class="highlight">Conversion</span> section should look like this:
+                        Your settings under the <em><strong>Conversion</strong></em> section should end up looking like this.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.48.46.png" alt="Conversion Settings">
+                        <img src="Screenshot_2025-08-22_at_0.48.46.png" alt="Conversion Settings">
                     </div>
                 </div>
             </div>
@@ -619,43 +767,44 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Scroll down to the <span class="highlight">Budget & schedule</span> section and select <span class="highlight">Lifetime budget</span>.
+                        Scroll down to the <em><strong>Budget & schedule</strong></em> section and select <strong>Lifetime budget</strong>.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.50.16.png" alt="Lifetime Budget Selection">
+                        <img src="Screenshot_2025-08-22_at_0.50.16.png" alt="Lifetime Budget Selection">
                     </div>
                     <p class="step-description">
-                        Setting your budget between <span class="highlight">$3-$5</span> will be enough to help us achieve the result we want - 1,000 impressions.
+                        Setting your budget between $3-$5 will be enough to help us achieve the result we want - 1,000 impressions.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.50.30.png" alt="Budget Amount">
+                        <img src="Screenshot_2025-08-22_at_0.50.30.png" alt="Budget Amount">
                     </div>
                     
                     <div class="substeps">
                         <h4 class="substeps-title">Schedule Guidelines</h4>
+                        <p style="color: var(--text-primary); margin-bottom: 1rem;">Adjust the Start and End dates with the following notes in mind</p>
                         <ul class="substeps-list">
                             <li class="substep">
                                 <div class="substep-bullet"></div>
-                                Start and End dates should be 24 hours apart
+                                They should be 24 hours apart
                             </li>
                             <li class="substep">
                                 <div class="substep-bullet"></div>
-                                Adjust the starting time to have an extra 30 minutes to 1 hour from the current time for processing
+                                Adjust the starting <em>time</em> to have an extra 30 minutes to 1h from the current time. This provisions for processing time of the campaign and you uploading the videos you will test.
                             </li>
                             <li class="substep">
                                 <div class="substep-bullet"></div>
-                                If traveling, check for time zone mismatches
+                                If you're traveling, there may be a mismatch between your current time zone and the time zone you see when you set up the test.
                             </li>
                         </ul>
                     </div>
 
                     <div class="warning">
                         <div class="warning-icon">⚠️</div>
-                        <div class="warning-text">After setting the schedule, double check that your budget has remained the same.</div>
+                        <div class="warning-text">After you set this up, double check that your budget has remained the same.</div>
                     </div>
 
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.50.43.png" alt="Schedule Settings">
+                        <img src="Screenshot_2025-08-22_at_0.50.43.png" alt="Schedule Settings">
                     </div>
                 </div>
             </div>
@@ -667,28 +816,29 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Scroll down to the <span class="highlight">Placements</span> section. Hover over <span class="highlight">Advantage+ placements</span> and click the <span class="highlight">Edit</span> button that appears.
+                        Scroll down to the <em>Placements</em> section and as you hover over the <strong>Advantage+ placements</strong>, an <span class="highlight">Edit</span> button will appear on the right. Click it.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.51.07.png" alt="Edit Placements">
+                        <img src="Screenshot_2025-08-22_at_0.51.07.png" alt="Edit Placements">
                     </div>
                     
                     <p class="step-description">
-                        Select <span class="highlight">Manual placements</span> for precise control over where your ads appear.
+                        Select Manual placements.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.51.23.png" alt="Manual Placements">
+                        <img src="Screenshot_2025-08-22_at_0.51.23.png" alt="Manual Placements">
                     </div>
                     
                     <p class="step-description">
-                        Deselect all other platforms except <span class="highlight">Facebook</span>.
+                        Deselect all other platforms, except Facebook.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.51.41.png" alt="Facebook Only Selection">
+                        <img src="Screenshot_2025-08-22_at_0.51.41.png" alt="Facebook Only Selection">
                     </div>
                     
                     <div class="substeps">
-                        <h4 class="substeps-title">Feed Selection</h4>
+                        <h4 class="substeps-title">Feeds Selection</h4>
+                        <p style="color: var(--text-primary); margin-bottom: 1rem;">In <strong>Feeds</strong> select:</p>
                         <ul class="substeps-list">
                             <li class="substep">
                                 <div class="substep-bullet"></div>
@@ -701,11 +851,12 @@
                         </ul>
                     </div>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.53.29.png" alt="Feed Selection">
+                        <img src="Screenshot_2025-08-22_at_0.53.29.png" alt="Feed Selection">
                     </div>
                     
                     <div class="substeps">
                         <h4 class="substeps-title">In-stream Ads for Reels</h4>
+                        <p style="color: var(--text-primary); margin-bottom: 1rem;">In <strong>In-stream ads for reels</strong> select:</p>
                         <ul class="substeps-list">
                             <li class="substep">
                                 <div class="substep-bullet"></div>
@@ -714,14 +865,14 @@
                         </ul>
                     </div>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.53.48.png" alt="In-stream Reels">
+                        <img src="Screenshot_2025-08-22_at_0.53.48.png" alt="In-stream Reels">
                     </div>
                     
                     <p class="step-description">
                         You will only have your Ad Set showing in 3 placements.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.53.19.png" alt="Final Placements">
+                        <img src="Screenshot_2025-08-22_at_0.53.19.png" alt="Final Placements">
                     </div>
                 </div>
             </div>
@@ -733,24 +884,24 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Give your <span class="highlight">Ad</span> a unique name to distinguish it from other ads in your campaign.
+                        We're ready to move to the final <em>container</em> and give a unique name to our <strong>Ad</strong>.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-28_at_15.41.34.png" alt="Ad Naming">
+                        <img src="Screenshot_2025-08-28_at_15.41.34.png" alt="Ad Naming">
                     </div>
                     
                     <p class="step-description">
-                        If you're working with multiple Facebook pages, select the appropriate one under the <span class="highlight">Identity</span> section.
+                        If you're working with many Facebook pages, select the one you'd like to create the test for under the <strong>Identity</strong> section of the Ad container.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.55.17.png" alt="Identity Selection">
+                        <img src="Screenshot_2025-08-22_at_0.55.17.png" alt="Identity Selection">
                     </div>
                     
                     <p class="step-description">
-                        Scroll down to the <span class="highlight">Ad Creative</span> section and click the <span class="highlight">[Video ad]</span> button.
+                        The fun part! Scroll down to the <strong>Ad Creative</strong> section and click the <span class="highlight">[Video ad]</span> button
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.55.42.png" alt="Video Ad Button">
+                        <img src="Screenshot_2025-08-22_at_0.55.42.png" alt="Video Ad Button">
                     </div>
                 </div>
             </div>
@@ -762,52 +913,64 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        This is your Media library - a folder of videos that will stay in the Ads manager platform. You can upload multiple videos at the same time here. Click the <span class="highlight">[Upload]</span> button at the top right. Once uploaded, select your video and hit <span class="highlight">[Next]</span>.
+                        This is your Media library. It's like a folder of videos that will stay in the Ads manager platform. You can upload multiple videos at the same time here.
+                    </p>
+                    <p class="step-description">
+                        Go ahead and click the <span class="highlight">[Upload]</span> button at the top right. Once the videos are uploaded from your computer into the Media library, select the video that you will test and hit <span class="highlight">[Next]</span>
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.57.57.png" alt="Media Library Upload">
+                        <img src="Screenshot_2025-08-22_at_0.57.57.png" alt="Media Library Upload">
                     </div>
                     
                     <p class="step-description">
-                        The next steps are about tweaking your video. You can skip most of them since you've likely already edited your video. Focus on the <span class="highlight">Text</span> section to add your title.
+                        The next steps on the left are about tweaking your video. You have probably already done that in the edit, so you can skip most of them. The one you want to look into is <strong>Text.</strong>
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_0.59.59.png" alt="Video Text Options">
+                        <img src="Screenshot_2025-08-22_at_0.59.59.png" alt="Video Text Options">
                     </div>
                     
                     <p class="step-description">
-                        This is where you'll write the Title that you want to test for your video.
+                        This is where you will write the Title that you want to test for your video.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.00.43.png" alt="Video Title Input">
+                        <img src="Screenshot_2025-08-22_at_1.00.43.png" alt="Video Title Input">
                     </div>
                     
                     <p class="step-description">
-                        In the <span class="highlight">Enhancements</span> step, keep AI enhancements off so you test something as close as possible to your actual video.
+                        The last, <em>Enhancements</em>, step will suggest visual touch ups and AI enhancements to your creative (video). Let's keep those off, so that we test something that will be as close as possible to the actual video you will post.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.01.01.png" alt="Enhancement Settings">
+                        <img src="Screenshot_2025-08-22_at_1.01.01.png" alt="Enhancement Settings">
                     </div>
                     
                     <p class="step-description">
-                        To set a custom thumbnail, click <span class="highlight">[Edit Media]</span>, then <span class="highlight">[Edit Video]</span>.
+                        Now that you can see your video in the <strong>Ad creative</strong> section, we're going to select a thumbnail.
+                    </p>
+                    <p class="step-description">
+                        Click <span class="highlight">[Edit Media]</span>, then <span class="highlight">[Edit Video]</span>
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.17.57.png" alt="Edit Media Button">
+                        <img src="Screenshot_2025-08-22_at_1.17.57.png" alt="Edit Media Button">
                     </div>
                     
                     <p class="step-description">
-                        Select <span class="highlight">Thumbnail</span> on the left, then choose <span class="highlight">(Manual)</span>. You can either choose from suggested thumbnails or upload your own image using the <span class="highlight">[Upload]</span> button.
+                        On the left side of this pop-up screen, select <strong>Thumbnail</strong>.
+                    </p>
+                    <p class="step-description">
+                        Then, select (Manual).
+                    </p>
+                    <p class="step-description">
+                        You can either choose one of the suggested thumbnails, or hit the <span class="highlight">[Upload]</span> button and add your own image.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.18.40.png" alt="Thumbnail Selection">
+                        <img src="Screenshot_2025-08-22_at_1.18.40.png" alt="Thumbnail Selection">
                     </div>
                     
                     <p class="step-description">
                         Don't forget to click <span class="highlight">[Save]</span> at the bottom right.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-28_at_18.43.03.png" alt="Save Button">
+                        <img src="Screenshot_2025-08-28_at_18.43.03.png" alt="Save Button">
                     </div>
                 </div>
             </div>
@@ -819,46 +982,61 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        You can stop here and hit <span class="highlight">[Publish]</span>, but Pro Creators test variations in the 3 main elements (Video, Title, Thumbnail) to see performance differences.
+                        You can stop here, hit <span class="highlight">[Publish]</span> and move on.
+                    </p>
+                    <p class="step-description">
+                        But our Pro Creators would test variations in the 3 main elements (Video, Title, Thumbnail) to see the difference in performance.
                     </p>
                     
                     <div class="pro-tip">
-                        <h4 class="pro-tip-title">Pro Creator Tip</h4>
+                        <h4 class="pro-tip-title">Pro Creator Strategy</h4>
                         <p class="pro-tip-text">
-                            The best element to test variations for is your video. Test different edits of the same video. The opening shot is the most impactful - prioritize testing different versions of that. Title and thumbnail changes usually have lower impact than video variations.
+                            The best element to test variations for is your video. You can test different edits of the same video. The opening shot is the most impactful thing to the performance - try editing and testing different versions of that with priority.
+                        </p>
+                        <p class="pro-tip-text" style="margin-top: 1rem;">
+                            You can also change the Title and the Thumbnail and test how that affects performance. Usually we see a much lower impact than the video.
                         </p>
                     </div>
                     
                     <p class="step-description">
-                        To create variations, click the three dots next to the <span class="highlight">Ad Set</span> and select <span class="highlight">Duplicate</span>.
+                        Alright, this is how you'll create the next variation in your test.
+                    </p>
+                    <p class="step-description">
+                        Click the three dots next to the <strong>Ad Set</strong> and select Duplicate.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.02.11.png" alt="Duplicate Ad Set">
+                        <img src="Screenshot_2025-08-22_at_1.02.11.png" alt="Duplicate Ad Set">
                     </div>
                     
                     <p class="step-description">
-                        Choose to duplicate it under the existing, original campaign.
+                        On the next screen, choose to duplicate it under the Existing, Original campaign.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.02.27.png" alt="Duplicate Under Existing Campaign">
+                        <img src="Screenshot_2025-08-22_at_1.02.27.png" alt="Duplicate Under Existing Campaign">
                     </div>
                     
                     <p class="step-description">
-                        Give the second <span class="highlight">Ad Set</span> and <span class="highlight">Ad</span> unique names.
+                        Now you have two <strong>Ad Sets</strong> under the same <strong>Campaign</strong>.
+                    </p>
+                    <p class="step-description">
+                        Let's give the second <strong>Ad Set</strong> and the second <strong>Ad</strong> a unique name.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.03.20.png" alt="Naming Duplicated Ad Set">
+                        <img src="Screenshot_2025-08-22_at_1.03.20.png" alt="Naming Duplicated Ad Set">
                     </div>
                     
                     <p class="step-description">
-                        Click into the second <span class="highlight">Ad</span>, scroll to <span class="highlight">Ad Creative</span>, click <span class="highlight">[Edit Media]</span>, then <span class="highlight">[Change Video]</span> to add your second test video.
+                        Next, you'll click into the second <strong>Ad</strong> and scroll to the <strong>Ad Creative</strong> section.
+                    </p>
+                    <p class="step-description">
+                        Click <span class="highlight">[Edit Media]</span>, then <span class="highlight">[Change Video]</span> and add the second video you will test. You can follow the same process as above.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.03.49.png" alt="Change Video">
+                        <img src="Screenshot_2025-08-22_at_1.03.49.png" alt="Change Video">
                     </div>
                     
                     <p class="step-description">
-                        You can duplicate the <span class="highlight">Ad Set</span> and change videos as many times as needed. Most creators test 2-3 <span class="highlight">Ad Sets</span> at a time.
+                        You can duplicate the <strong>Ad Set</strong> and change the video as many times as you want by following the same steps. Most creators usually test 2 or 3 <strong>Ad Sets</strong> at a time.
                     </p>
                 </div>
             </div>
@@ -870,17 +1048,17 @@
                 </div>
                 <div class="step-content">
                     <p class="step-description">
-                        Once you're done setting everything up, click back into the <span class="highlight">Campaign</span> container at the top left to ensure your whole campaign gets published.
+                        Once you're done setting everything up, click back into the <strong>Campaign</strong> container at the top left. This will make sure your whole campaign gets published.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-28_at_18.57.32.png" alt="Campaign Container">
+                        <img src="Screenshot_2025-08-28_at_18.57.32.png" alt="Campaign Container">
                     </div>
                     
                     <p class="step-description">
-                        Finally, click the green <span class="highlight">[Publish]</span> button at the bottom right to launch your ad test campaign.
+                        Finally, click the green <span class="highlight">[Publish]</span> button at the bottom right.
                     </p>
                     <div class="screenshot">
-                        <img src="https://raw.githubusercontent.com/networkmediacreator/ad-testing-guide/main/Screenshot_2025-08-22_at_1.05.49.png" alt="Publish Button">
+                        <img src="Screenshot_2025-08-28_at_1.05.49.png" alt="Publish Button">
                     </div>
                 </div>
             </div>
@@ -922,7 +1100,7 @@
             });
         }, {
             threshold: 0.3,
-            rootMargin: '-120px 0px -50% 0px'
+            rootMargin: '-140px 0px -50% 0px'
         });
 
         // Observe all steps
@@ -933,12 +1111,12 @@
         // Add hover effects to screenshots
         document.querySelectorAll('.screenshot').forEach(screenshot => {
             screenshot.addEventListener('mouseenter', () => {
-                screenshot.style.transform = 'scale(1.02)';
+                screenshot.style.transform = 'translateY(-2px)';
                 screenshot.style.transition = 'transform 0.3s ease';
             });
             
             screenshot.addEventListener('mouseleave', () => {
-                screenshot.style.transform = 'scale(1)';
+                screenshot.style.transform = 'translateY(0)';
             });
         });
     </script>
