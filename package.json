@@ -1,0 +1,12 @@
+{
+  "name": "facebook-ad-guide",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "preview": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
