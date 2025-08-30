@@ -1058,7 +1058,7 @@
                         Finally, click the green <span class="highlight">[Publish]</span> button at the bottom right.
                     </p>
                     <div class="screenshot">
-                        <img src="Screenshot_2025-08-28_at_1.05.49.png" alt="Publish Button">
+                        <img src="Screenshot_2025-08-22_at_1.05.49.png" alt="Publish Button">
                     </div>
                 </div>
             </div>
@@ -1085,7 +1085,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const stepId = entry.target.id;
-                    const stepNumber = stepId === 'intro' ? 'intro' : stepId.replace('step-', '');
+                    let stepNumber;
+                    if (stepId === 'intro') {
+                        stepNumber = 'intro';
+                    } else if (stepId.startsWith('step-')) {
+                        stepNumber = stepId.replace('step-', '');
+                    } else {
+                        return; // Skip if not a recognized step
+                    }
                     
                     // Update active state
                     document.querySelectorAll('.progress-item').forEach(item => {
@@ -1099,12 +1106,12 @@
                 }
             });
         }, {
-            threshold: 0.3,
-            rootMargin: '-140px 0px -50% 0px'
+            threshold: 0.1,
+            rootMargin: '-100px 0px -60% 0px'
         });
 
         // Observe all steps
-        document.querySelectorAll('.step, #intro').forEach(step => {
+        document.querySelectorAll('#intro, .step').forEach(step => {
             observer.observe(step);
         });
 
